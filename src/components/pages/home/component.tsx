@@ -7,8 +7,8 @@ export const Home: React.FC = () => {
     const handleSubmitTweet = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const res = addPost((e.target as HTMLElement).innerText); 
-        console.log(res)
-        setPosts(res)
+        // console.log(res)9-
+        setPosts([...res])
     }
     useEffect(() => {
         console.log(posts)
