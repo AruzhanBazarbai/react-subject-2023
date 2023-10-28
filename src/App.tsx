@@ -1,16 +1,16 @@
-// import classes from './App.scss';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import classes from './App.module.scss';
 import { Home } from './pages';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        header
-      </header>
-      <main>
-        <Home />
-      </main>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      {/* <Route path="/" element={<AppContainer />}> */}
+        <Route index element={<Home />} />
+      {/* </Route> */}
+    </Routes>
+  </BrowserRouter>
   );
 }
 
